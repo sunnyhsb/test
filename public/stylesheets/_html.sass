@@ -1,0 +1,57 @@
+@import 'base/base'
+
+$form-border-color-hover: #aaa
+
+input[type=text]
+  height: 40px
+  font-size: 14px
+  padding-left: 15px
+  padding-right: 15px
+  box-shadow: none
+  line-height: 40px
+  box-sizing: border-box
+  border-radius: 0
+
+select
+  +box-sizing(border-box)
+  +transition(border-color)
+  background-color: white
+  border-radius: 0
+  border: 1px solid $form-border-color
+  height: 40px
+  font-size: 14px
+  padding-left: 15px
+  padding-right: 15px
+  box-shadow: none
+  line-height: 40px
+  font-family: $form-font-family
+  margin-bottom: $base-spacing / 2
+  width: 100%
+
+  &:hover 
+    border-color: $form-border-color-hover
+
+
+  &:focus 
+    border-color: $form-border-color-focus
+    box-shadow: $form-box-shadow-focus
+    outline: none
+
+$tablebase: #fff
+tr
+  &:nth-child(even)
+    background: tint(darken($tablebase,2%),65%)
+  &:nth-child(odd)
+    background: tint(darken($tablebase,5%),55%)
+  th
+    border-top: solid 1px darken($tablebase,25%)
+    border-bottom: solid 1px darken($tablebase,25%)
+    background: tint(darken($tablebase,15%),55%)
+    padding-left: 20px
+    padding-right: 20px
+  td
+    padding-left: 20px
+    padding-right: 20px
+    input[type=text]
+      +margin( -10px  0px -10px 0px)
+

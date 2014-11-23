@@ -1,0 +1,262 @@
+extends layout
+
+block content
+  header
+    button.js-menu-trigger.sliding-menu-button(type="button")
+      img(src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png",alt="Menu Icon")
+    .title
+    //.user-details
+      .menu-button
+  section.main-content
+    aside
+      //--------- Side Menu -----------------//
+      ul.accordion
+        li
+          a.js-accordion-link(href="javascript:void(0)") Home
+        li
+          a.js-accordion-trigger(href="javascript:void(0)") Timesheets
+          ul.submenu
+            li
+              a(href="#!/CompleteTimesheet") Complete Timesheet
+            li
+              a(href="/approve") Approve Timesheet
+            li
+              a(href="javascript:void(0)") Search Timesheet
+
+        li
+          a.js-accordion-trigger(href="javascript:void(0)") Products
+          ul.submenu
+            li
+              a(href="javascript:void(0)") Sub Item 1
+            li
+              a(href="javascript:void(0)") Sub Item 2
+        li
+          a.js-accordion-trigger(href="javascript:void(0)") Weightings
+          ul.submenu
+            li
+              a(href="javascript:void(0)") Sub Item 1
+            li
+              a(href="javascript:void(0)") Sub Item 2
+        li
+          a.js-accordion-trigger(href="javascript:void(0)") Administration
+          ul.submenu
+            li
+              a(href="javascript:void(0)") Sub Item 1
+            li
+              a(href="javascript:void(0)") Sub Item 2
+        li
+          a.js-accordion-trigger(href="javascript:void(0)") Client Vision
+          ul.submenu
+            li
+              a(href="javascript:void(0)") Sub Item 1
+            li
+              a(href="javascript:void(0)") Sub Item 2
+
+      //-----------Side menu end -------------//
+    .actual-content
+      ul.accordion-tabs-minimal
+        li.tab-header-and-content
+          a(href="#",class="tab-link is-active") Clients
+            span.badge 5%
+          .tab-content
+            table
+              tr
+                th Name
+                th Place
+                th Thing
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Nidhi
+                td Pune
+                td Alien
+              tr
+                td Gagan
+                td Pimple Saudagar
+                td Pilot
+              tr
+                td Name
+                td Place
+                td Thing
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Nidhi
+                td Pune
+                td Alien
+              tr
+                td
+                  input(type='text')
+                td Pimple Saudagar
+                td Pilot
+            input(type='text')
+            input(type='text')
+            select
+              option happy
+              option nidhi
+        li.tab-header-and-content
+          a(href="#",class="tab-link") Project/Deals
+            span.badge 90%
+          .tab-content
+            table
+              tr
+                th Project/Deal
+                th Product
+                th Time(%)
+              tr
+                td Happy
+                td Pune
+                td 5
+              tr
+                td Happy
+                td Pune
+                td 5
+              tr
+                td Happy
+                td Pune
+                td 5
+              tr
+                td Happy
+                td Pune
+                td 5
+              tr
+                td Happy
+                td Pune
+                td 5
+              tr
+                td Happy
+                td Pune
+                td 5
+              tr
+                td Happy
+                td Pune
+                td 5
+              tr
+                td Nidhi
+                td Pune
+                td Alien
+              tr
+                td Gagan
+                td Pimple Saudagar
+                td Pilot
+              tr
+                td Name
+                td Place
+                td Thing
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Nidhi
+                td Pune
+                td Alien
+              tr
+                td
+                  input(type='text')
+                td Pimple Saudagar
+                td Pilot
+            input(type='text')
+            input(type='text')
+            select
+              option happy
+              option nidhi
+        li.tab-header-and-content
+          a(href="#",class="tab-link") Miscellaneous
+            span.badge 5%
+          .tab-content
+            table
+              tr
+                th Name
+                th Place
+                th Thing
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Nidhi
+                td Pune
+                td Alien
+              tr
+                td Gagan
+                td Pimple Saudagar
+                td Pilot
+              tr
+                td Name
+                td Place
+                td Thing
+              tr
+                td Happy
+                td Pune
+                td Human
+              tr
+                td Nidhi
+                td Pune
+                td Alien
+              tr
+                td
+                  input(type='text')
+                td Pimple Saudagar
+                td Pilot
+            input(type='text')
+            input(type='text')
+            select
+              option happy
+              option nidhi
+
+
+  footer Copyright - HSBC Holdings Pvt Ltd.
+

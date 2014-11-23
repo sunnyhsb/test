@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "widgets.js",
+  "sourceRoot": "",
+  "sources": [
+    "widgets.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA;AAAA"
+}

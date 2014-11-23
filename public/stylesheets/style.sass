@@ -1,0 +1,373 @@
+@import 'home'
+
+$header-color: #eee
+$desktop: min-width 768px
+$mobile: max-width 767px
+$header-height: 3rem
+$footer-height: 2rem
+
+body
+  +outer-container(100%)
+  //+linear-gradient(top,#ddd,#eee,#ddd)
+  +position(fixed, 0 0 0 0 )
+  margin: 0
+  +padding(null)
+
+
+
+header
+
+  +fill-parent
+  +margin(null)
+  +background(url("../images/logo4.png") center $header-height *0.5/4 no-repeat, center no-repeat $header-color scroll)
+  background-size: min(50rem,$header-height*25/4) $header-height *3/4
+  height: $header-height
+  border-bottom: solid 4px darken(#db0011,1%)
+  -webkit-box-shadow: 0 0 0.6rem black
+  -moz-box-shadow: 0 0 0.6rem black
+  box-shadow: 0 0 0.6rem black
+
+  +breakpoint($mobile)
+    +background(url("../images/logo4.png") center $header-height *0.5/2 no-repeat, center no-repeat #efefef scroll)
+    background-size: min(50rem,$header-height*25/8) $header-height *3/8
+  .title
+    +span-columns(6)
+    +shift(2)
+    padding-left: 5rem
+    font-size: 2rem
+    line-height: 4rem
+    +breakpoint($mobile)
+      padding-left: 1rem
+
+  button
+    +margin($header-height*.5/4)
+    background: darken($header-color,20%)
+    height: $header-height *3/4
+    border-radius: 0
+    border: solid 1px darken($header-color,30%)
+    box-shadow: none
+    +pad($header-height* 0.75/4 $header-height/4)
+    &:hover
+      background: darken($header-color,25%)
+
+  +direction-context(right-to-left)
+    .user-details
+      +span-columns(1)
+      +omega
+      +size(7rem 3rem)
+      margin: .5rem
+      border-radius: 1.5rem
+      background: #e0e0e0
+      -webkit-box-shadow: inset 0 0 0.3rem black
+      -moz-box-shadow: inset 0 0 0.3rem black
+      box-shadow: inset 0 0 .3rem black
+      .menu-button
+        margin: .4286rem
+        +size(6rem 2.1428rem)
+        border-radius: 1.07142rem
+        background: tomato
+        -webkit-box-shadow: 0 0 0.1rem black
+        -moz-box-shadow: 0 0 0.1rem black
+        box-shadow: 0 0 0.1rem black
+
+
+.main-content
+  +outer-container(100%)
+  position: fixed
+  top: $header-height
+  bottom: $footer-height
+
+  aside
+    +span-columns(2.5)
+    height: 100%
+    background: darken($header-color,10%)
+    border-right: solid 1px darken($header-color,20%)
+    overflow: auto
+    padding: 1rem
+    box-shadow: 0.3rem 0rem 0.3rem -0.2rem #888
+    +breakpoint($mobile)
+      +span-columns(12)
+      display: none
+    //margin-right: 0
+
+  .actual-content
+    //margin-top: 0.4%
+    height: 100%
+    //margin-bottom: 0.4%
+    box-sizing: border-box
+    overflow: auto
+    +pad(flex-gutter() flex-gutter() flex-gutter() 0)
+    +span-columns(9.5)
+    +omega()
+    +breakpoint($mobile)
+      +span-columns(12)
+      z-index: -2
+
+  .actual-content-full
+    margin-top: 0.4%
+    height: 98%
+    margin-bottom: 0.4%
+    overflow: auto
+    +pad(flex-gutter())
+    +span-columns(12)
+    +omega()
+
+
+footer
+  position: fixed
+  bottom: 0
+  width: 100%
+  height: $footer-height
+  line-height: $footer-height
+  padding-left: 1rem
+  color: #888
+  background: $header-color
+  box-shadow: 0 0 0.6rem #888
+  border-top: solid 1px darken($header-color,20%)
+  z-index: -1
+
+
+
+
+/*-------------------------------------- Sliding Menu ---------------------------- */
+$sliding-menu-border-color: $dark-gray
+$sliding-menu-background: lighten($header-color, 5)
+$sliding-menu-color: #fff
+$sliding-menu-border: 1px solid $sliding-menu-border-color
+$sliding-menu-background-hover: $base-accent-color
+$sliding-menu-color-hover: #fff
+
+.sliding-menu-button 
+  +inline-block
+  cursor: pointer
+  font-size: $base-font-size
+  margin-bottom: $base-line-height
+  position: relative
+  outline: none
+
+  img 
+    height: 1.3rem
+
+
+
+.sliding-menu-content 
+  +position(fixed, 0px auto 0px 0px)
+  +size(220px 100%)
+  +transform(translateX(-220px))
+  +transition(all .25s linear)
+  background: $sliding-menu-background
+  z-index: 999999
+  overflow-y: scroll
+  -webkit-overflow-scrolling: touch
+
+  li a 
+    border-bottom: $sliding-menu-border
+    color: $sliding-menu-color
+    display: block
+    font-weight: bold
+    padding: 1em
+
+    &:hover 
+      background-color: $sliding-menu-background-hover
+      color: $sliding-menu-color-hover
+  
+
+
+  &.is-visible 
+    +transform(translateX(0))
+
+
+
+.menu-screen 
+  +position(fixed, 0px 0px 0px 0px)
+  +transition
+  background: $sliding-menu-border-color
+  opacity: 0
+  visibility: hidden
+  z-index: 999998
+
+  &.is-visible 
+    opacity: .4
+    visibility: visible
+
+//-------------------------------------------Accordion---------------------------
+
+.accordion 
+  $accordion-menu-border-color: $base-border-color
+  $accordion-menu-color: $base-font-color
+  $accordion-menu-border: 1px solid $accordion-menu-border-color
+  $accordion-menu-background: lighten($accordion-menu-border-color, 10)
+  $accordion-menu-hover: lighten($accordion-menu-background, 2)
+  $accordion-menu-sub-background: darken($accordion-menu-background, 5)
+  $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6)
+  $accordion-menu-sub-hover: lighten($accordion-menu-sub-background, 2)
+  $accordion-menu-list-padding: $base-spacing/2 $gutter
+
+  background-color: $accordion-menu-background
+  border: $accordion-menu-border
+  margin-bottom: $base-spacing
+
+  li 
+    border-bottom: $accordion-menu-border
+
+    > a 
+      color: $accordion-menu-color
+      padding: $accordion-menu-list-padding
+      display: block
+  
+
+    &:last-child 
+      border: none
+  
+
+    &:hover 
+      background-color: $accordion-menu-hover
+  
+
+
+  ul.submenu 
+    display: none
+
+    li 
+      background-color: $accordion-menu-sub-background
+
+      &:first-child 
+        border-top: $accordion-menu-border
+        box-shadow: inset 0 1px 1px $accordion-menu-sub-inset
+    
+
+      &:hover 
+        background-color: $accordion-menu-sub-hover
+
+      a.menu-selected
+        border-bottom: none //solid 4px lighten(#db0011,10%)
+        border-top:  none //solid 4px lighten(#db0011,10%)
+        background: $jade
+        border-right: none
+        box-shadow: inset 0 0 2px #888
+  
+
+
+  .is-expanded 
+    display: block
+    padding-bottom: 0
+
+
+.menu-selected
+  border-right: solid 4px darken(#db0011,100%)
+  padding-left: 1.5rem
+
+
+//----------------------------------------------------------TABS----------------------------------------------------------------------//
+.accordion-tabs-minimal 
+  $tab-border-color: $base-border-color
+  $tab-border: 1px solid $tab-border-color
+  $tab-content-background: $base-background-color
+  $tab-active-background: $tab-content-background
+  $tab-inactive-color: $base-background-color
+  $tab-inactive-hover-color: darken($light-gray, 5)
+  $tab-mode: $desktop //$medium-screen
+
+  @include clearfix
+  //margin-bottom: $base-spacing
+  height: 100%
+  overflow: hidden
+  +breakpoint($mobile)
+    overflow: auto
+
+  li.tab-header-and-content 
+    @include media($tab-mode) 
+      display: inline
+  
+
+
+  a.tab-link 
+    background-color: $tab-inactive-color
+    border-top: $tab-border
+    color: $dark-gray
+    display: block
+    font-weight: 800
+    padding: $base-spacing/2 $gutter
+    //height: 5%
+    z-index: 2
+
+    @include media($tab-mode) 
+      @include inline-block
+      border-top: 0
+  
+
+    &:hover 
+      color: $base-link-color
+  
+
+    &:focus 
+      outline: none
+  
+
+    &.is-active 
+      border-bottom: 0
+
+      @include media($tab-mode) 
+        border: $tab-border
+        border-bottom-color: $tab-active-background
+        margin-bottom: -3px
+    
+  
+
+
+  .tab-content
+    z-index: 1
+    height: 95%
+
+    //position: absolute
+    display: none
+    overflow: auto
+    //padding: $base-spacing $gutter
+
+    @include media($tab-mode) 
+      border-top: $tab-border
+      float: left
+  
+
+
+//----------------------------------Badges----------------------------------//
+
+$badge-background: $medium-gray
+$badge-dark-color: $dark-gray
+$badge-error-color: #FBE3E4
+$badge-notice-color: lighten($base-accent-color, 40)
+$badge-success-color: #E6EFC2
+$badge-font-color: #fff
+$badge-font-size: $base-font-size * .75
+
+.badge
+  @include inline-block
+  background: $badge-background
+  border-radius: 2em
+  color: $badge-font-color
+  font-size: $badge-font-size
+  font-weight: 600
+  line-height: 1
+  padding: .25em 1em
+  text-align: center
+  margin-left: 0.5rem
+
+  &.dark 
+    background: $badge-dark-color
+
+
+  &.error 
+    background: $badge-error-color
+    color: darken($badge-error-color, 60)
+
+
+  &.notice 
+    background: $badge-notice-color
+    color: darken($badge-notice-color, 60)
+
+
+  &.success 
+    background: $badge-success-color
+    color: darken($badge-success-color, 60)
+
+
