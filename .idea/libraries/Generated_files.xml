@@ -4,11 +4,13 @@
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/public/javascripts/app.js" />
         <item url="file://$PROJECT_DIR$/public/javascripts/test.js" />
+        <item url="file://$PROJECT_DIR$/public/javascripts/ele.js" />
         <item url="file://$PROJECT_DIR$/public/javascripts/rap.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/public/javascripts/app.js" />
+      <root url="file://$PROJECT_DIR$/public/javascripts/ele.js" />
       <root url="file://$PROJECT_DIR$/public/javascripts/test.js" />
       <root url="file://$PROJECT_DIR$/public/javascripts/rap.js" />
     </CLASSES>

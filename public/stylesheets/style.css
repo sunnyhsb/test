@@ -618,4 +618,16 @@ footer {
     background: #E6EFC2;
     color: #56651a; }
 
+select {
+  height: 40px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  select:after {
+    content: "";
+    display: table;
+    clear: both; }
+  select:after {
+    content: "| "; }
+
 /*# sourceMappingURL=style.css.map */

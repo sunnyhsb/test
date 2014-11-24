@@ -1,0 +1,137 @@
+// Typography
+$sans-serif: $helvetica;
+$serif: $georgia;
+$base-font-family: $helvetica;
+$header-font-family: $serif;
+
+// Font Sizes
+$base-font-size: 14px;
+$h1-font-size: $base-font-size * 2.25;
+$h2-font-size: $base-font-size * 2;
+$h3-font-size: $base-font-size * 1.75;
+$h4-font-size: $base-font-size * 1.5;
+$h5-font-size: $base-font-size * 1.25;
+$h6-font-size: $base-font-size;
+
+// Line height
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+
+// Other Sizes
+$base-border-radius: 0px;
+$base-spacing: $base-line-height * 1em;
+$base-z-index: 0;
+
+// Colors
+/* ----------------------- HSBC Color Paletee------------------------------- */
+$primary-red:#db0011;
+$primary-red-l:lighten($primary-red,30%);
+$primary-red-d:darken($primary-red,15%);
+
+$dark-red:#83000a;
+$dark-red-l: lighten($dark-red,15%);
+$dark-red-d: darken($dark-red,15%);
+
+$white: #ffffff;
+$white-d: darken($white,15%);
+
+$pearl:#ededed;
+$pearl-l:lighten($pearl,10%);
+$pearl-d:darken($pearl,15%);
+
+
+$silver:#d7d8d6;
+$silver-l:lighten($silver,40%);
+$silver-d:darken($silver,15%);
+
+$pewter:#929292;
+$pewter-l:lighten($pewter,20%);
+$pewter-d: darken($pewter,15%);
+
+$graphite:#404040;
+$graphite-l:lighten($graphite,15%);
+$graphite-d: darken($graphite,20%);
+
+$black:#000;
+$black-l:lighten($black,25%);
+
+$light-slate:#4d6474;
+$light-slate-l:lighten($light-slate,15%);
+$light-slate-d:darken($light-slate,15%);
+
+$slate:#3e505d;
+$slate-l:lighten($slate,15%);
+$slate-d:darken($slate,20%);
+
+$dark-slate:#253038;
+$dark-slate-l:lighten($dark-slate,15%);
+$dark-slate-d:darken($dark-slate,20%);
+
+
+$jade:#008580;
+$jade-l:lighten($jade,15%);
+$jade-d:darken($jade,15%);
+
+$jade-dark:#005e59;
+$jade-dark-l:lighten($jade-dark,15%);
+$jade-dark-d:darken($jade-dark,15%);
+
+
+$gold:#e9a115;
+$gold-l:lighten($gold,20%);
+$gold-d:darken($gold,15%);
+
+$antique-gold:#ba8111;
+$antique-gold-l:lighten($antique-gold,20%);
+$antique-gold-d:darken($antique-gold,15%);
+
+$violet:#4e3a7c;
+$violet-l:lighten($violet,15%);
+$violet-d: darken($violet,25%);
+
+$indigo:#262362;
+$indigo-l:lighten($indigo,15%);
+$indigo-d:lighten($indigo,25%);
+
+/*--------------------------------------------------End----------------------------------*/
+
+$blue: #477DCA;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #DDD;
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+
+
+$base-background-color: white;
+
+// Font Colors
+$base-font-color: $graphite-d;
+$base-accent-color: $slate;
+
+// Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15);
+$base-button-color: $base-link-color;
+$hover-button-color: $hover-link-color;
+
+// Flash Colors
+$alert-color: $antique-gold;
+$error-color: $dark-red-l;
+$notice-color: lighten($base-accent-color, 40);
+$success-color: $jade;
+
+// Border color
+$base-border-color: $white;
+$base-border: 1px solid $base-border-color;
+
+// Forms
+$form-border-color: $pewter-l;
+$form-border-color-hover: $pewter-d;
+$form-border-color-focus: $base-accent-color;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: inset 0 1px 3px rgba(black,0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: $base-font-size;
+$form-font-family: $base-font-family;
